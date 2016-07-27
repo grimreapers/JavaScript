@@ -1,0 +1,30 @@
+<script type="text/javascript">
+window.onload=function(){
+  tableOutIn=function(e,type){
+    if(type!="open"){
+      e.style.display="none"
+    }
+    else{
+      e.style.display="table-row"                   //设置作为一个表格行显示
+    }
+  }
+  var_tableOutIn=document.getElementById("tableOutIn");
+  document.getElementById("openRow").onclick=function(){
+    tableOutIn(_tableOutIn.rows[0],"open")
+  }
+    document.getElementById("inRow").onclick=function(){
+    tableOutIn(_tableOutIn.rows[0])
+  }
+};
+</script>
+
+
+<h5>显示/隐藏第一行表格内的元素</h5>
+<table id='tableOutIn' border="1" width="500">
+  <tr>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+</table>
+<input value='展开' type="button" id='openRow'/>
+<input value='收缩' type="button" id='inRow'/>
