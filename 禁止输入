@@ -1,0 +1,13 @@
+<div>表单元素特殊元素属性一<input type="text" value="禁止输入" disabled/></div>
+<div>表单元素特殊元素属性二<input type="text" value="禁止输入" disabled="disabled"/></div>
+<div>表单元素特殊元素属性三<input type="text" value="禁止输入" readonly/></div>
+
+disabled属性规定禁用input元素
+被禁用的input元素既不可用也不可以点击
+readonly规定只读但是仍可以选择复制
+
+
+<script type="text/javascript">
+  window.onload = fuction(){
+    
+  }
