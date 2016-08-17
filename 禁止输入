@@ -8,6 +8,17 @@ readonly规定只读但是仍可以选择复制
 
 
 <script type="text/javascript">
-  window.onload = fuction(){
-    
-  }
+  window.onload = function(){
+    var_inhibitingInput = docment.getElementById("inhibitingInput");                //获取响应元素
+    _inhibitingInput.onfocus = function(){                                          //一、失去控制焦点
+      _inhibitingInput.blur();
+    }
+    var noText = function(){                                                        //二、组合使用
+      _inhibitingInput.value = "";
+    }
+    _inhibitingInput.onkeyup = 
+    _inhibitingInput.onblur = noText;
+  }；
+</script>
+<div><input type = "text" value="禁止输入" id='inhibitingInput'/></div>
+//上面的方法无法直接阻止鼠标复制，粘贴来的文本，只是失去焦点的时候可以清空内容
